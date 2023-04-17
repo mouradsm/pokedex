@@ -12,7 +12,7 @@ var colors = {
   "steel": Color.fromRGBO(90, 143, 163, 100),
   "fairy": Color.fromRGBO(251, 138, 236, 100),
   "poison": Color.fromRGBO(183, 103, 208, 100),
-  "eletric": Color.fromRGBO(251, 210, 0, 100),
+  "electric": Color.fromRGBO(251, 210, 0, 100),
   "psychic ": Color.fromRGBO(255, 102, 118, 100),
   "water": Color.fromRGBO(113, 127, 254, 100),
   "dark": Color.fromRGBO(90, 83, 102, 100),
