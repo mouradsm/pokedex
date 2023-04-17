@@ -1,5 +1,6 @@
 import 'package:basic_utils/basic_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:pokedex/constants/colors.dart' as type_colors;
 import 'package:pokedex/constants/background_colors.dart' as bg_colors;
 
@@ -9,15 +10,6 @@ class PokeTile extends StatelessWidget {
   final String image;
   final String type_1;
   final String? type_2;
-
-  String _convertId(int id) {
-    var idString = id.toString();
-
-    if (idString.length == 1) return '#00$id';
-    if (idString.length == 2) return '#0$id';
-
-    return '#$id';
-  }
 
   PokeTile(
       {required this.name,
@@ -41,7 +33,7 @@ class PokeTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                _convertId(id),
+                '#${NumberFormat('000').format(id)}',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
               Padding(
