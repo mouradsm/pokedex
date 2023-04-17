@@ -8,8 +8,8 @@ class ApiService {
   Future<List<Pokemon>> fetchPokemon({int page = 1}) async {
     List<Pokemon> pokemons = [];
 
-    int offset = (page * 10) - 10;
     int pageSize = 10;
+    int offset = (page * 10) - pageSize;
 
     try {
       for (int i = 1; i <= pageSize; i++) {
