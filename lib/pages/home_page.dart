@@ -14,12 +14,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final _apiService = ApiService();
 
-  late bool _isLastPage;
-
-  late bool _loading;
   final int _numberOfPostsPerRequest = 10;
   late List<Pokemon> _pokemons;
-  final int _nextPageTrigger = 3;
 
   final _paginController = PagingController<int, Pokemon>(firstPageKey: 1);
 
@@ -32,8 +28,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
     _pokemons = [];
-    _isLastPage = false;
-    _loading = false;
 
     // _fetchPokemons();
   }
