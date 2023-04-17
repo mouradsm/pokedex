@@ -28,8 +28,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
     _pokemons = [];
-
-    // _fetchPokemons();
   }
 
   @override
@@ -51,10 +49,6 @@ class _HomePageState extends State<HomePage> {
     final nextPageKey = pageNumber + 1;
 
     _paginController.appendPage(_pokemons, nextPageKey);
-
-    // setState(() {
-    //   _pokemons.addAll(pokemons);
-    // });
   }
 
   @override
